@@ -12,7 +12,7 @@
     <!-- Para consultar a lista de ícones, acesse: https://icons.getbootstrap.com/ -->
     <!-- CSS -->
     <link href="css/estilo.css" rel="stylesheet" />
-    <link href="images/fatec_votorantim.png" rel="icon" type="image/png" />
+    <link href="images/fatec.png" rel="icon" type="image/png" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <title>Área Reservada</title>
@@ -21,7 +21,7 @@
 <body onload="verificaLogado()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Fatec Votorantim</a>
+            <a class="navbar-brand" href="#">Fatec Itu</a>
             <div class="ms-auto">
                 <div id="imagemUsuario">
                     <button class="btn btn-danger" type="button" onclick="logoutFirebase()">Logout</button>
@@ -99,8 +99,7 @@
         endInput.addEventListener('blur', function () {
             const enderecoValue = endInput.value
 
-            getLatLong(enderecoValue, (erro, latitude,
-                longitude) => {
+            getLatLong(enderecoValue, (erro, latitude,longitude) => {
                 if (erro) { alert(erro) }
                 else {
                     latInput.value = latitude

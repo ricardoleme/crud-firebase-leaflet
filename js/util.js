@@ -23,8 +23,7 @@ function getCEP(cep, callback){
 }
 
 function getLatLong(endereco, callback){
-    let url=`https://nominatim.openstreetmap.org/
-    search?format=json&q=${endereco}`
+    let url=`https://nominatim.openstreetmap.org/search?format=json&q=${endereco}`
     fetch(url)
     .then(response => response.json())
     .then(data => {

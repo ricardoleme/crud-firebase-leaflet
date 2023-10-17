@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,29 +12,56 @@
     <!-- Para consultar a lista de ícones, acesse: https://icons.getbootstrap.com/ -->
     <!-- CSS -->
     <link href="css/estilo.css" rel="stylesheet" />
-    <link href="images/fatec_votorantim.png" rel="icon"
-    type="image/png" />
+    <link href="images/fatec.png" rel="icon" type="image/png" />
     <title>Área Reservada</title>
 </head>
 
 <body class="login">
-    <div class="card shadow-lg rounded">
-        <div class="text-center my-5">
-            <img src="images/fatec_votorantim.png" title="Fatec"
-            class="w-50"/>
-        </div>
+    <div class="container"> 
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12"> <!-- lg para Desktop, md para Tablet e sm para Mobile -->
+                <div class="card shadow-lg rounded">
+                    <div class="text-center my-5">
+                        <img src="images/fatec.png" title="Fatec" class="w-50" />
+                    </div>
 
-        <div class="card-header">
-            <h5 class="card-title d-flex justify-content-center">Área Reservada</h5>
-        </div>
-        <div class="card-body my-2 d-flex justify-content-center">
-            <button id="loginGoogle" type="button"
-            class="btn btn-primary mx-2"
-            onclick="loginGoogle()"
-            title="Efetue o login com o Google">
-        <img src="images/logo-google.svg"/>
-            Logar com o Google
-        </button>
+                    <div class="card-header bg-danger text-light">
+                        <h5 class="card-title d-flex justify-content-center"><i class="bi bi-file-lock"></i> Área Reservada</h5>
+                    </div>
+                    <div class="card-body my-2 d-flex justify-content-center">
+                        <!-- Formulário de login -->
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required
+                                    autofocus autocomplete="email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" id="senha" placeholder="Senha" required
+                                    autocomplete="current-password">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="lembrar">
+                                <label class="form-check-label" for="lembrar">Lembrar o Usuário</label>
+                            </div>
+                            <button type="submit" class="btn btn-success" id="login"
+                                title="Efetue o login com o usuário e senha"><i class="bi bi-door-open"></i>
+                                Login</button>
+                            <button type="button" class="btn btn-outline-primary mx-2" id="loginGoogle"
+                                onclick="logaGoogle()" title="Efetue o login com o Google">
+                                <img src="images/logo-google.svg" />
+                                Logar com o Google
+                            </button>
+                        </form>
+
+                    </div>
+                    <!-- Link para cadastro -->
+                    <div class="card-footer">
+                        <div class="text-center">
+                            Ainda não é usuário? <a href="cadastro.html">Cadastre-se</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -42,8 +70,9 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
-    <!--script do projeto -->
+    <!--script do projeto -->        
     <script src="js/firebase.js"></script>
+    <script src="js/lembrar.js"></script>
 </body>
 
 </html>
